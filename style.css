@@ -137,7 +137,7 @@ h1 {
   border: 2px solid var(--color-primary);
   color: var(--color-third);
   box-shadow: 2px 2px 10px var(--color-primary);
-  max-width: 18rem;
+  max-width: 17rem;
   padding: 2rem;
   /* margin: 1rem; */
 }
@@ -245,12 +245,20 @@ footer nav a {
     justify-content: space-between;
   }
 
+  .header .logo {
+    display: flex;
+  }
+
   .header .logo, .header nav, .header .button {
     margin: .75rem;
   }
   
   .header nav a {
     font-size: 1.50rem;
+  }
+
+  .header .button {
+    width: 1rem;
   }
 }
 
