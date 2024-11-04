@@ -7,77 +7,66 @@
 }
 
 :root {
-  --color-primary: #000000;
+  --color-primary: #020b11;
   --color-secondary: #d93611;
   --color-third: #f09c20;
-  --color-black: #0d0d0d;
   --color-white: #f6f6f6;
   --color-gray: #bfb8ae;
 }
 
 body {
-  background: linear-gradient(90deg, var(--color-gray) 0%, var(--color-white) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-gray) 0%,
+    var(--color-white) 100%
+  );
   padding: 0 1rem;
+}
+
+.jazz-logo {
+  width: 7rem;
+}
+
+.jazz-simbol {
+  width: 3rem;
 }
 
 header,
 .hero-section,
 .courses-section,
 footer {
-  border-color: var(--color-black);
+  border-color: var(--color-primary);
   border-style: solid;
   border-width: 0 1px 1px 1px;
   padding: 1.25rem;
 }
 
-header {
-  display: flex;
-  margin: 1rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-header .jazz-logo {
-  width: 7rem;
-}
-
-header .jazz-simbol {
-  width: 3rem;
-}
-
 header nav {
-  display: flex;
-  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem auto 0;
 }
 
 nav a {
-  color: var(--color-black);
+  color: var(--color-primary);
   font-size: 1.25rem;
   padding: 0.5rem;
   text-decoration: none;
 }
 
 header nav a:nth-child(2n -1) {
-  text-align: right;
+  text-align: center;
 }
 
 .button {
   background-color: var(--color-primary);
-  border: 2px solid var(--color-black);
-  box-shadow: 4px 4px 0 var(--color-black);
+  border: 2px solid var(--color-third);
+  box-shadow: 0 0.1rem 0.2rem 0 var(--color-primary);
   color: var(--color-white);
-  display: flex;
+  display: block;
   font-size: 1.25rem;
-  padding: 0.75rem 1rem;
   max-width: 18rem;
   min-width: 15rem;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 500;
 }
 
 .hero-section {
@@ -92,12 +81,7 @@ header nav a:nth-child(2n -1) {
 }
 
 h1 {
-  font-size: 3rem;
   line-height: 105%;
-}
-
-h2 {
-  font-size: 1.5rem;
 }
 
 .hero-section p {
@@ -133,6 +117,8 @@ h2 {
   width: 48px;
 }
 
+/* CURSOS */
+
 .courses-section {
   padding-bottom: 8rem;
 }
@@ -146,40 +132,37 @@ h2 {
   margin-bottom: 4rem;
 }
 
-.cards strong {
-  color: var(--color-gray);
-}
-
 .card {
-  background-color: var(--color-black);
+  background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
-  color: var(--color-secondary);
-  box-shadow: 2px 2px 10px var(--color-black);
-  max-width: 17rem;
-  padding: 2rem 0 0 2rem;
+  color: var(--color-third);
+  box-shadow: 2px 2px 10px var(--color-primary);
+  max-width: 18rem;
+  padding: 2rem;
   /* margin: 1rem; */
-}
-
-.card img {
-  background-color: var(--color-secondary);
-  border: 2px solid var(--color-third);
-  border-radius: 1rem;
-  margin: 0.5rem;
 }
 
 .card:nth-child(2n) {
   align-self: end;
 }
 
-.card strong {
-  display: block;
-  font-size: 1.5rem;
-  margin: 1rem 0;
+.card img {
+  background-color: var(--color-third);
+  border: 2px solid var(--color-secondary);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
 }
 
-.card a {
+.card strong {
   display: block;
-  margin: 2rem 0 0 auto;
+  font-size: 1.75rem;
+  margin: 1rem 0;
+  color: var(--color-gray);
+}
+
+.card a img {
+  display: block;
+  margin: 1.50rem 0 0 auto;
   width: fit-content;
 }
 
@@ -190,9 +173,15 @@ footer {
   padding: 1rem 1.25rem 4rem;
 }
 
+footer p {
+  display: block;
+  justify-content: center;
+  width: 15rem;
+}
+
 footer nav a {
   display: block;
-  padding-left: 0;
+  padding: 1rem;
 }
 
 .newsletter-form label {
@@ -201,92 +190,36 @@ footer nav a {
 }
 
 .newsletter-form input {
-  border: 2px solid var(--color-black);
-  box-shadow: 4px 4px 0 var(--color-black);
+  border: 2px solid var(--color-primary);
+  box-shadow: 4px 4px 0 var(--color-primary);
   font-size: 1rem;
   padding: 0.5rem;
   width: 100%;
 }
 
 .btn-social {
-
   h3 {
-    color: var(--color-black);
+    color: var(--color-primary);
     a {
-      color: var(--color-black);
+      color: var(--color-secondary);
     }
   }
 
   & button {
-    width: 2rem;
-    height: 2rem;
     border: none;
-    font-size: 3rem;
-    margin: 1rem;
+    font-size: 2.5rem;
+    margin: .5rem;
     cursor: pointer;
-    gap: 30px;
-    color: var(--color-secondary);
+    gap: 1rem;
+    color: var(--color-primary);
+    background-color: transparent;
     transition: 0.2s;
   }
 }
 
 /* FIM FOOTER */
 
-/* ESTILOS PADRÕES */
-.mt-1 {
-  margin-top: 1rem;
-}
-
-.mt-2 {
-  margin-top: 2rem;
-}
-
-.mb-1 {
-  margin-bottom: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 2rem;
-}
-
-.ml-1 {
-  margin-left: 1rem;
-}
-
-.ml-2 {
-  margin-left: 2rem;
-}
-
-.mr-1 {
-  margin-right: 1rem;
-}
-
-.mr-2 {
-  margin-right: 2rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.text-primary {
-  color: var(--color-secondary);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.fw-1 {
-  font-weight: 500;
-}
-
-.fw-2 {
-  font-weight: 600;
-}
-
-/* Responsividade Desktop */
+/* RESPONSIVIDADE */
 
 @media screen and (min-width: 40rem) {
   header nav {
@@ -299,6 +232,7 @@ footer nav a {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .card:nth-child(2n) {
     margin-top: 1rem;
   }
@@ -311,10 +245,12 @@ footer nav a {
     justify-content: space-between;
   }
 
-  .header img,
-  nav,
-  a {
-    margin: 0;
+  .header .logo, .header nav, .header .button {
+    margin: .75rem;
+  }
+  
+  .header nav a {
+    font-size: 1.50rem;
   }
 }
 
@@ -334,12 +270,12 @@ footer nav a {
     flex-direction: row-reverse;
   }
 
-  .about-column {
+  .about-footer {
     flex: 2;
     padding: 0.75rem;
   }
 
-  .about-column p {
+  .about-footer p {
     font-size: 1.5rem;
     max-width: 16rem;
   }
@@ -350,6 +286,7 @@ footer nav a {
 
   .newsletter-form {
     flex: 3;
+    text-align: center;
   }
 
   .btn-social {
@@ -359,6 +296,6 @@ footer nav a {
 
 @media screen and (min-width: 80rem) {
   .container {
-    max-width: 90rem;
+    max-width: 80rem;
   }
 }
